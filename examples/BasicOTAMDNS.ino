@@ -13,7 +13,7 @@ void setup() {
   Serial.println("\nStart setup");
 
   // Initialiseer WiFi, mDNS en OTA met één regel
-  OTAMDNS_begin(ssid, password, OTAPREFIX, OTAVERLEN, OTAPASS, SUBADD);
+  OTAMDNS_begin(ssid, password, OTAPREFIX, OTAVERLEN, OTAPASS, SUBADD,__FILE__);
 
   Serial.println("Setup klaar");
 }
