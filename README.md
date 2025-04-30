@@ -13,7 +13,7 @@ NB. Dit is mijn allereerste library maar ik heb hem wel uitgebreid getest op D1-
 ## Gebruik
 ```
   // Initialiseer WiFi, mDNS en OTA met één regel
-  OTAMDNS_begin(ssid, password, OTAPREFIX, OTAVERLEN, OTAPASS, SUBADD);
+  OTAMDNS_begin(ssid, password, OTAPREFIX, OTAVERLEN, OTAPASS, SUBADD, __FILE__);
   Serial.println("Setup klaar");
 }
 
