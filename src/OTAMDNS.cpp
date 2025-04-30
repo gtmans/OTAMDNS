@@ -2,8 +2,8 @@
 
 String fullHost;
 
-void OTAMDNS_begin(const char* ssid, const char* password, const char* hostPrefix, int verLength, const char* otapass, int subadd) {
-  String myhost = __FILE__;
+void OTAMDNS_begin(const char* ssid, const char* password, const char* hostPrefix, int verLength, const char* otapass, int subadd,String myhost) {
+  //String myhost = __FILE__;
   myhost = myhost.substring(myhost.length() - 4 - verLength, myhost.length() - 4);
   fullHost = String(hostPrefix) + myhost;
   const char* OTA_HOST = fullHost.c_str();
