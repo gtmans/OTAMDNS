@@ -7,8 +7,7 @@ Zo kun je vanuit de Arduino IDE bij Tools/Port zien welk programma, versie en IP
 bv. menu Tools/Port: M5-OTA12-V1_12 at 192.168.2.15
 
 LET OP! Mocht je problemen ondervinden met deze library gebruik dan het originele programma in examples\OTAMDNSORG.ino
-
-NB. Dit is mijn eerste library en heb hem uitgebreid getest op D1-mini en M5 Core maar vergeet niet dat ik een 65+ beginner ben ...
+Dit is mijn eerste library en heb hem uitgebreid getest op D1-mini en M5 Core maar vergeet niet dat ik een 65+ beginner ben ...
 
 ## Gebruik
 ```
