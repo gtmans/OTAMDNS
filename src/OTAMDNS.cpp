@@ -2,21 +2,21 @@
 
 String fullHost;
 
-void OTAMDNS_begin(const char* ssid, const char* password, const char* hostPrefix, int verLength, const char* otapass, int subadd,String myhost) {
+void OTAMDNS_begin(const char* ssid, const char* password, const char* hostPrefix, int verLength, const char* otapass, int subadd, String myhost) {
   //String myhost = __FILE__;
   myhost = myhost.substring(myhost.length() - 4 - verLength, myhost.length() - 4);
   fullHost = String(hostPrefix) + myhost;
   const char* OTA_HOST = fullHost.c_str();
 
 #if defined(ESP8266)
-  if (subadd >= 0) {
+  if (subadd >= 0 && subadd<256) {
     IPAddress local_IP(192, 168, 2, subadd);
     IPAddress gateway(192, 168, 2, 254);
     IPAddress subnet(255, 255, 255, 0);
     WiFi.config(local_IP, gateway, subnet);
   }
 #elif defined(ESP32)
-  if (subadd >= 0) {
+  if (subadd >= 0 && subadd<256) {
     IPAddress local_IP(192, 168, 2, subadd);
     IPAddress gateway(192, 168, 2, 254);
     IPAddress subnet(255, 255, 255, 0);

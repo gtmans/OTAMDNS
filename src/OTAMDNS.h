@@ -11,7 +11,7 @@
   #include <ESP8266mDNS.h>
 #endif
 
-void OTAMDNS_begin(const char* ssid, const char* password, const char* hostPrefix, int verLength, const char* otapass, int subadd = -1, __FILE__);
+void OTAMDNS_begin(const char* ssid, const char* password, const char* hostPrefix, int verLength, const char* otapass, int subadd, String myhost);
 void OTAMDNS_loop();
 
 #endif
